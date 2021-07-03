@@ -40,10 +40,10 @@ It will generate a `openwrt_for_breed.bin` file that can be flashed in Breed
 Bootloader.
 
 To flash it turn on the router while pressing the reset button, connect an
-Ethernet cable to LAN, go to http://192.168.0.1, select the second option in the
-left menu, mark the *second checkbox* and select the generated file also on the
-*second file picker*. Press the only button available in the page to continue,
-and the only button that appears to confirm in the next page.
+Ethernet cable to LAN, go to http://192.168.1.1, select the second option in the
+left menu, mark the **second checkbox** and select the generated file also on
+the **second file picker**. Press the only button available in the page to
+continue, and the only button that appears to confirm in the next page.
 
 ## Credits
 

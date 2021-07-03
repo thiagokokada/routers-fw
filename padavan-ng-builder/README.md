@@ -6,7 +6,7 @@ it easier to build without chasing all the dependencies, and also avoiding usage
 of insecure scripts like
 [Prometheus](http://prometheus.freize.net/)<sup>1</sup>. It doesn't has all the
 features from Prometheus neither (e.g.: extra themes), and it doesn't meant to
-be: this scripts are meant to be as simple as it can be.
+be: those scripts are meant to be as simple as it can be.
 
 To use them, make sure you have `docker` installed and your user has permission
 to run `docker` commands (or run the commands with `sudo`, not a great idea but
