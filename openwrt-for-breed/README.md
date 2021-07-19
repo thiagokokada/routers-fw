@@ -51,8 +51,8 @@ continue, and the only button that appears to confirm in the next page.
   in Luci or using `sysupgrade` command. So every time you need to flash an new
   image you need to use the `openwrt_for_breed.sh` and flash it using Breed.
   At least there is an option in Breed to keep the current settings (unmark the
-  last tick box on the firmware flash screen). Just keep in mind that this is
-  **untested** if it actually works
+  last tick box on the firmware flash screen; this is **untested** but even if
+  it doesn't work it shouldn't brick your device, so it is worth a try)
 
 ## Credits
 
