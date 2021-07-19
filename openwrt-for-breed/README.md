@@ -14,7 +14,7 @@ work for you.
 
 ## Why and How?
 
-The release for OpenWrt on Xiaomi Mi Router 3G (and some other devices) is
+The release for OpenWrt on Xiaomi Mi Router 3G (and some other devices) are
 splited in multiple files. For example:
 
 - `xiaomi_mi-router-3g-initramfs-kernel.bin`
@@ -44,6 +44,15 @@ Ethernet cable to LAN, go to http://192.168.1.1, select the second option in the
 left menu, mark the **second checkbox** and select the generated file also on
 the **second file picker**. Press the only button available in the page to
 continue, and the only button that appears to confirm in the next page.
+
+## Known issues
+
+- `sysupgrade` images doesn't seem to work on `Flash new firmware image` option
+  in Luci or using `sysupgrade` command. So every time you need to flash an new
+  image you need to use the `openwrt_for_breed.sh` and flash it using Breed.
+  At least there is an option in Breed to keep the current settings (unmark the
+  last tick box on the firmware flash screen. Just keep in mind that this is
+  **untested** if it actually works
 
 ## Credits
 
