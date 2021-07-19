@@ -55,9 +55,15 @@ continue, and the only button that appears to confirm in the next page.
   but even if it doesn't work it shouldn't brick your device, so it is worth a
   try)
   + Maybe a workaround is to use `*-kernel1.bin` and `*-rootfs0.bin` images and
-    flash then manually using `mtd` commands, like this: ``` mtd write
-    mir3g-squashfs-kernel1.bin kernel1 mtd write mir3g-squashfs-rootfs0.bin
-    rootfs0 ``` However this is also **untested**.
+    flash then manually using `mtd` commands, like this:
+    
+    ```
+    # SSH inside the router
+    $ mtd write mir3g-squashfs-kernel1.bin kernel1
+    $ mtd write mir3g-squashfs-rootfs0.bin rootfs0
+    ```
+    
+    However this is also **untested**.
 
 ## Credits
 
