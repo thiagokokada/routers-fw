@@ -25,7 +25,7 @@ splited in multiple files. For example:
 For initial flash you need to flash both `*-kernel1.bin` and `*-rootfs0.bin`
 files. You would generally flash those using `mtd` utility command via SSH.
 However, if you're using [Breed Bootloader](https://breed.hackpascal.net/) and
-are on a firmware that doesn't have `mtd` (like `padavan-ng`), it is impossible
+is on a firmware that doesn't have `mtd` (like `padavan-ng`), it is impossible
 to flash OpenWrt image as-is, since Breed only supports flashing one monolithic
 file instead.
 
@@ -50,20 +50,10 @@ continue, and the only button that appears to confirm in the next page.
 - `*-sysupgrade.bin` images doesn't seem to work on `Flash new firmware image`
   option in Luci or using `sysupgrade` command. So every time you need to flash
   a new image you need to use the `openwrt_for_breed.sh` and flash it using
-  Breed. At least there is an option in Breed to keep the current settings
-  (unmark the last tick box on the firmware flash screen; this is **untested**
-  but even if it doesn't work it shouldn't brick your device, so it is worth a
-  try)
-  + Maybe a workaround is to use `*-kernel1.bin` and `*-rootfs0.bin` images and
-    flash then manually using `mtd` commands, like this:
-    
-    ```
-    # SSH inside the router
-    $ mtd write mir3g-squashfs-kernel1.bin kernel1
-    $ mtd write mir3g-squashfs-rootfs0.bin rootfs0
-    ```
-    
-    However this is also **untested**.
+  Breed.
+  + There is an option in Breed to keep the current settings (unmark the last
+    tick box on the firmware flash screen; **untested** but even if it doesn't
+    work it shouldn't brick your device, so it is worth a try)
 
 ## Credits
 
