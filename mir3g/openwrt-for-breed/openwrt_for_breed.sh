@@ -15,14 +15,28 @@ usage() {
     exit 1
 }
 
+abort() {
+    echo "$@" >&2
+    exit 1
+}
+
 if [[ "$#" != 2 ]]; then
     usage
 fi
 
-# The kernel file must be 4MB (4,194,304 bytes). So we take the kernel file and subtract
-# its size is from 4194304 and we get the file needed to get kernel + dummy = 4194304
 kernel1="$1"
 rootfs0="$2"
+
+if [[ "$kernel1" != *-kernel1.bin ]] || [[ ! -f "$kernel1" ]]; then
+    abort "$kernel1 doesn't seem to be a valid kernel1 file!"
+fi
+
+if [[ "$rootfs0" != *-rootfs0.bin ]] || [[ ! -f "$rootfs0" ]]; then
+    abort "$rootfs0 doesn't seem to be a valid rootfs0 file!"
+fi
+
+# The kernel file must be 4MB (4,194,304 bytes). So we take the kernel file and subtract
+# its size is from 4194304 and we get the file needed to get kernel + dummy = 4194304
 dummy="dummy.bin"
 kernel1_size="$(stat -c%s "$kernel1")"
 dummy_size="$(( 4194304 - "$kernel1_size" ))"
