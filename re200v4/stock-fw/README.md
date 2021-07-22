@@ -1,6 +1,13 @@
 # RE200v4 back to stock
 
-Ready to flash image from OpenWrt to put RE200v4 back to stock image.
+Ready to flash image from OpenWrt to put RE200v4 back to stock image. Generated
+with `tplink-safeloader` script.
 
-[Site version](https://www.tp-link.com/us/support/download/re200/): RE200(US)_V4_200708
-Device version: 1.1.0
+To flash it (assuming device has the IP `192.168.1.1`), run:
+
+```
+$ scp oem-sysupgrade.bin root@192.168.1.1:/tmp
+$ ssh root@192.168.1.1
+# on-device
+# sysupgrade -F oem-sysupgrade.bin
+```
