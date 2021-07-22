@@ -34,3 +34,4 @@ cat "$kernel1" "$dummy" "$kernel1" "$dummy" "$rootfs0" > "$result"
 
 echo "Done!"
 echo "Generated $result file"
+echo "md5sum: $(md5sum "$result")"
