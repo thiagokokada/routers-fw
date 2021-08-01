@@ -10,7 +10,7 @@ else
 endif
 PACKAGES := luci-ssl luci-app-sqm luci-proto-relay iperf3 iwinfo wpad-wolfssl -wpad-basic-wolfssl
 
-${FILENAME}/bin/targets/${TARGET}/${ARCH}: ${FILENAME}
+${FILENAME}/bin/targets/${TARGET}/${ARCH}/sha256sums: ${FILENAME}
 	cd "${FILENAME}"; make image PROFILE="${DEVICE}" PACKAGES="${PACKAGES}"
 
 ${FILENAME}: ${FILENAME}.tar.xz
