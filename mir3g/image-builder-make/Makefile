@@ -8,7 +8,7 @@ ifeq (${VERSION}, snapshots)
 else
 	FILENAME := openwrt-imagebuilder-${VERSION}-${TARGET}-${ARCH}.${HOST_ARCH}
 endif
-PACKAGES := luci-ssl luci-app-sqm luci-app-upnp speedtest-netperf iperf3 htop ethtool dnsmasq-full -dnsmasq irqbalance iwinfo wpad-wolfssl -wpad-basic-wolfssl
+PACKAGES := luci-ssl luci-app-sqm luci-app-upnp speedtest-netperf iperf3 htop ethtool dnsmasq-full -dnsmasq irqbalance iwinfo wpad-wolfssl -wpad-basic-wolfssl iw-full -iw
 
 openwrt_for_breed.bin: ${FILENAME}/bin/targets/${TARGET}/${ARCH}/sha256sums
 	../openwrt-for-breed/openwrt_for_breed.sh ${FILENAME}/bin/targets/${TARGET}/${ARCH}/openwrt-${VERSION}-${TARGET}-${ARCH}-${DEVICE}-squashfs-kernel1.bin ${FILENAME}/bin/targets/${TARGET}/${ARCH}/openwrt-${VERSION}-${TARGET}-${ARCH}-${DEVICE}-squashfs-rootfs0.bin

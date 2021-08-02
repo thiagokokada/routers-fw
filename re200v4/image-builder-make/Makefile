@@ -8,7 +8,7 @@ ifeq (${VERSION}, snapshots)
 else
 	FILENAME := openwrt-imagebuilder-${VERSION}-${TARGET}-${ARCH}.${HOST_ARCH}
 endif
-PACKAGES := luci-ssl luci-app-sqm luci-proto-relay iperf3 iwinfo wpad-wolfssl -wpad-basic-wolfssl
+PACKAGES := luci-ssl luci-app-sqm luci-proto-relay iperf3 iwinfo wpad-wolfssl -wpad-basic-wolfssl iw-full -iw
 
 ${FILENAME}/bin/targets/${TARGET}/${ARCH}/sha256sums: ${FILENAME}
 	cd "${FILENAME}"; make image PROFILE="${DEVICE}" PACKAGES="${PACKAGES}"
