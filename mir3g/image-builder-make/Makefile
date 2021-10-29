@@ -1,7 +1,7 @@
 TARGET := ramips
 ARCH := mt7621
 DEVICE := xiaomi_mi-router-3g
-VERSION := 21.02.0
+VERSION := 21.02.1
 HOST_ARCH := Linux-x86_64
 ifeq (${VERSION}, snapshots)
 	FILENAME := openwrt-imagebuilder-${TARGET}-${ARCH}.${HOST_ARCH}
